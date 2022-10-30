@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Welcome page
 Route::get('/', function () {
-    return view('welcome');
+    return view('/welcome');
 });
+
+// Creating Users
+Route::get('/users/register', function () {
+    return view('/users/register');
+});
+
+// Viewing all the Users
+Route::get('/users/index', [UserController::class, 'index']);

@@ -1,0 +1,30 @@
+.form
+{
+    background-color: antiquewhite;
+}
+
+body
+{
+    background-color: aliceblue;
+}
+
+.p-4
+{
+    padding: 1rem;
+    
+}
+
+nav a
+{
+    /*adding a space */
+    padding: .5rem;
+
+}
+
+#app{
+    background-color: #fff;
+    margin: auto;
+    width: 500px;
+    padding: 20px;
+    border-radius: 20px;
+}

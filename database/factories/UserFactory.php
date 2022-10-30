@@ -17,10 +17,19 @@ class UserFactory extends Factory
      */
     public function definition()
     {
+        
+
         return [
-            'name' => fake()->name(),
-            'email' => fake()->unique()->safeEmail(),
-            'email_verified_at' => now(),
+            'first_name' => fake()->name(),
+            'second_name' => fake()->name(),
+            'birth_date' => fake()->dateTimeThisMonth(),
+            'gender' => fake()->randomElement(['male', 'female']),
+            'street_address' => fake()->city(),
+            'street_address_second' => fake()->city(),
+            'city' => fake()->city(),
+            'region' => fake()->country(),
+            'postal' => fake()->postcode(),
+            'status' => fake()->randomElement(['single', 'married']),
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
             'remember_token' => Str::random(10),
         ];
